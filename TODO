@@ -1,0 +1,12 @@
+docs
+
+tests
+  more server tests
+  establish browser tests
+  
+benchmarks
+  traditional - offline/console
+  live - browserscope
+  historical - performance vs time
+  
+geometrical primatives
