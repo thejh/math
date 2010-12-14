@@ -10,7 +10,4 @@ for component in components
   path = "./#{component.toLowerCase()}"
   Math[component] = require path
 
-if module?.exports? then module.exports = Math
-else
-  for component in components  
-    window.Math[component] = Math[component]
+if module?.exports? then module.exports = Math else Math.extend @Math
