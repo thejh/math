@@ -39,7 +39,7 @@ task 'test', 'test', ->
   exec 'cake build', (error, stdout, stderr) ->
     print stdout
       
-    vows = spawn 'vows', ['--verbose', '--spec', 'test/matrix4.coffee']
+    vows = spawn 'vows', ['--spec']
     vows.stdout.on 'data', (data) ->
       # log color(colors.green, "#{data}")
       print "#{data}"
@@ -74,6 +74,9 @@ task 'build', 'build', ->
         log color(colors.red, "#{stderr}")
         
         log color(colors.green, '# built math')
+        
+task 'pack', 'pack', ->
+  exec 'requisition -i src/ src/math.coffee src/matrix3.coffee src/matrix4.coffee src/quaternion.coffee src/vector2.coffee src/vector3.coffee > lib/library.js'
 
 task 'release', 'release', ->
   fs.readFile 'package.coffee', (error, data) ->
