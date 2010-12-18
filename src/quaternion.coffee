@@ -1,6 +1,6 @@
 Quaternion =
   create: (args) ->
-    q = new Math.ARRAY_TYPE args
+    q = new Math.ARRAY_TYPE args or 4
     
     q.__defineGetter__ 'x', -> @[0]
     q.__defineGetter__ 'y', -> @[1]

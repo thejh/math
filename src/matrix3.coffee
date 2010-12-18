@@ -1,6 +1,6 @@
 Matrix3 =
   create: (args) ->
-    m = new Math.ARRAY_TYPE args
+    m = new Math.ARRAY_TYPE args or 9
     
     m.__defineGetter__ 'm00', -> @[0]
     m.__defineGetter__ 'm01', -> @[1]

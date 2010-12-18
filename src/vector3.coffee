@@ -1,6 +1,6 @@
 Vector3 =
   create: (args) ->
-    v = new Math.ARRAY_TYPE args
+    v = new Math.ARRAY_TYPE args or 3
     
     v.__defineGetter__ 'x', -> @[0]
     v.__defineGetter__ 'y', -> @[1]

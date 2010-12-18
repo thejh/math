@@ -2,7 +2,7 @@
 
 Matrix4 =
   create: (args) ->
-    m = new Array args
+    m = new Array args or 16
     
     m.__defineGetter__ 'm00', -> @[0]
     m.__defineGetter__ 'm01', -> @[1]
