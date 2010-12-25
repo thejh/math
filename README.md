@@ -41,6 +41,24 @@ Math - high performance 2D/3D extensions for CommonJS's "Math" module
 
 # Installation
     npm install math
+    
+# Usage
+    require('math').extend(Math)
+
+### Bundling Math for browsers
+To use Math on the client (in the browser), simply pack it with requisition...
+
+    cake pack
+    
+before copy or link `lib/library.js` into your project and including it on the client.
+
+For example, if we symlink the entire Math project into ~/facebook_killer/public/vendor/feisty/math ...
+
+    <script src="/vendor/feisty/math/lib/library.js" type="text/javascript" />
+
+Now we're able to require Math on the client
+
+    require('./math').extend(Math)
 
 # "Golden Rules"
 
